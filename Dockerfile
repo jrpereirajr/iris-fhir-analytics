@@ -11,9 +11,12 @@ WORKDIR /opt/irisapp
 RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
 USER ${ISC_PACKAGE_MGRUSER}
 
-COPY  src src
+COPY src src
 COPY fhirdata fhirdata
 COPY iris.script /tmp/iris.script
+# Copy fhiranalytics ZPM module
+# TODO: remove after publish in ZPM
+# COPY ./module.xml /tmp/module.xml
 COPY fhirUI /usr/irissys/csp/user/fhirUI
 
 # run iris and initial 

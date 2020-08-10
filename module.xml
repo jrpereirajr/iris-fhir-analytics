@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="objectscript-sample.ZPM">
+  <Document name="iris-fhir-analytics.ZPM">
     <Module>
-      <Name>objectscript-sample</Name>
-      <Version>0.0.1</Version>
+      <Name>iris4health-fhir-analytics</Name>
+      <Version>1.0.0</Version>
       <Packaging>module</Packaging>
+      <Resource Directory="src" Name="community.fhirAnalytics.deepsee.PKG"/>
+      <Resource Directory="src" Name="community.fhirAnalytics.utils.PKG"/>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="PackageSample.PKG"/>
+      <Invokes>
+        <!-- https://github.com/intersystems-community/objectscript-package-example/blob/master/module.xml -->
+        <Invoke Class="community.fhirAnalytics.utils.Setup" Method="Run">
+        </Invoke>
+      </Invokes>
     </Module>
   </Document>
 </Export>
