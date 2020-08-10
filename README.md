@@ -45,11 +45,11 @@ A simple IRIS Analytics patient dashboard will also be availble in this URL:
 ```
 http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Patient.dashboard
 ```
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/ZFq9Wnsdh4.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/ZFq9Wnsdh4.gif"></img>
 
 This same dashboard can be viewed using [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb):
 
 ```
 http://localhost:32783/dsw/index.html#!/d/User/Patient.dashboard?ns=FHIRSERVER
 ```
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/lj4mZjlnp5.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/lj4mZjlnp5.gif"></img>
