@@ -9,10 +9,12 @@ A set of IRIS Analytics resources built on IRIS for Health FHIR server.
   * A simple cube, pivot table and dashboard for patientsusing IRIS Analytics (formerly known as DeepSee);
   * Create a cube manager.
   * [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb) support
+  * An example for setup a dashboard in Microsoft Power BI
 
 ## What's coming soon?
 
 * More dashboards
+* Use of others tools for view FHIR analytical data
 
 ## Installing
 
@@ -53,3 +55,7 @@ This same dashboard can be viewed using [DeepSeeWeb](https://openexchange.inters
 http://localhost:32783/dsw/index.html#!/d/User/Patient.dashboard?ns=FHIRSERVER
 ```
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/lj4mZjlnp5.gif"></img>
+
+Follow instructions [here](power-bi-creating-patient-dashboard.md) to configure a Microsoft Power BI dashboard.
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/2HYZUZO6b6.gif"></img>
