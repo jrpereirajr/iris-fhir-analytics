@@ -2,13 +2,15 @@
 
 There are some tutorials on DC about how to use IRIS as data provider for Power BI. Even though, I decide to did a quick tutorial, specific on how to use cubes created on FHIR schema data as data source for Power BI dashboards.
 
+This example uses Microsoft Power BI Desktop. You can get a trial version [here](https://powerbi.microsoft.com/en-us/get-started/).
+
 If you need more information on setting up conection between IRIS and Power BI (as Cache as well), please, search for ["Power BI" in DC](https://community.intersystems.com/search?search=Power+bi&type%5B%5D=articles&interval=all_time&sort=rel).
 
 So, let's started.
 
 ## 1) Create a connection to IRIS or open a previous one in Power BI
 
-In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](power-bi-creating-patient-dashboard.md).
+In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](power-bi-config.md).
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_mAmrs4UJlj.png"></img>
 

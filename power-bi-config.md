@@ -2,7 +2,7 @@
 
 ## Install Power BI Desktop
 
-This example used Microsoft Power BI Desktop. You can get a trial version [here](https://powerbi.microsoft.com/en-us/get-started/).
+This example uses Microsoft Power BI Desktop. You can get a trial version [here](https://powerbi.microsoft.com/en-us/get-started/).
 
 ## Check your ODBC driver
 
