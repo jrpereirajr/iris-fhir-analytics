@@ -34,9 +34,9 @@ ClassMethod Run()
   Write !, "OK!"
 
   Write !, "Installing DeepSeeWeb..."
-  ZPM "install dsw"
+  ZPM "install dsw 2.1.43"
   // I don't know why, but it's necessary call install twice in order to create /dsw csp app...
-  ZPM "install dsw"
+  ZPM "install dsw 2.1.43"
   Write !, "OK!"
 }
 
