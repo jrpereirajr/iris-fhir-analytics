@@ -1,6 +1,6 @@
 # iris4health-fhir-analytics
 
-A set of IRIS Analytics resources built on IRIS for Health FHIR server.
+An example on how to use IRIS for Health FHIR SQL schema to build analytics features.
 
 ## What's ready?
 
@@ -32,6 +32,8 @@ After installation, some data will be uploaded to IRIS for Health. Wait for IRIS
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/Screenshot_36.png"></img>
 
+More information on FHIR SQL schema can be found [here](doc\fhir-sql-schema.md).
+
 A simple IRIS Analytics patient dashboard will also be available in this URL:
 
 *Credentials*:
@@ -52,6 +54,6 @@ http://localhost:32783/dsw/index.html#!/d/User/Patient.dashboard?ns=FHIRSERVER
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/lN0F0MSNJr.gif"></img>
 
-You can also use cube create for FHIR data to feed up a Microsoft Power BI dashboard (instructions [here](power-bi-creating-patient-dashboard.md)).
+You can also use cube create for FHIR data to feed up a Microsoft Power BI dashboard (instructions [here](doc/power-bi-creating-patient-dashboard.md)).
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/xUxNmpMvvQ.gif"></img>
