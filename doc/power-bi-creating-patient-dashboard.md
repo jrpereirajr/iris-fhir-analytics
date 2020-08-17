@@ -12,7 +12,7 @@ So, let's started.
 
 ## 1) Create a connection to IRIS or open a previous one in Power BI
 
-In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](doc/power-bi-config.md).
+In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](power-bi-config.md).
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_mAmrs4UJlj.png"></img>
 
