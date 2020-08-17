@@ -20,7 +20,7 @@ Credentials are:
 * User: _SYSTEM
 * Password: SYS
 
-Theses steps are shown below. Please, note that the super server port has changed after recording this video, so you must replace port 51773 by port 32782.
+These steps are shown below. Please, note that the super server port has changed after recording this video, so you must replace port 51773 by port 32782.
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/esNeBGOCPp.gif"></img>
 
 If you're having difficulty with Portuguese labels, you can find instructions in English [here](https://youtu.be/MmrePiLBDac?t=1858).

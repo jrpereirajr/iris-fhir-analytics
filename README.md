@@ -4,7 +4,7 @@ An example on how to use IRIS for Health FHIR SQL schema to build analytics feat
 
 ## What's ready?
 
-* A sample FHIR server setup on a IRIS for Health instance.
+* A sample FHIR server setup on an IRIS for Health instance.
 * A POC for:
   * A simple cube, pivot table and dashboard for patients using IRIS Analytics (formerly known as DeepSee);
   * Create a cube manager.
@@ -32,7 +32,7 @@ After installation, some data will be uploaded to IRIS for Health. Wait for IRIS
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/Screenshot_36.png"></img>
 
-More information on FHIR SQL schema can be found [here](doc\fhir-sql-schema.md).
+More information on FHIR SQL schema can be found [here](doc/fhir-sql-schema.md).
 
 A simple IRIS Analytics patient dashboard will also be available in this URL:
 

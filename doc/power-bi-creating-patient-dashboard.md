@@ -4,7 +4,7 @@ There are some tutorials on DC about how to use IRIS as data provider for Power 
 
 This example uses Microsoft Power BI Desktop. You can get a trial version [here](https://powerbi.microsoft.com/en-us/get-started/).
 
-If you need more information on setting up conection between IRIS and Power BI (as Cache as well), please, search for ["Power BI" in DC](https://community.intersystems.com/search?search=Power+bi&type%5B%5D=articles&interval=all_time&sort=rel).
+If you need more information on setting up connection between IRIS and Power BI (as Cache as well), please, search for ["Power BI" in DC](https://community.intersystems.com/search?search=Power+bi&type%5B%5D=articles&interval=all_time&sort=rel).
 
 So, let's started.
 
@@ -32,11 +32,11 @@ You can import data or create a link to it in IRIS server. In this case, I chose
 
 For some reason, some relations between star schema tables should not be recognized by Power BI. Without such relations, features like drill down could not work properly.
 
-So, after connecting to IRIS, check if all expected relations was recognized by Porwer BI.
+So, after connecting to IRIS, check if all expected relations were recognized by Power BI.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_lXZfdwdb5k.png"></img>
 
-If something was missed, you can define relations manualy, like shown below.
+If something was missed, you can define relations manually, like shown below.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/8bxuLiWpZK.gif"></img>
 
@@ -44,7 +44,7 @@ If something was missed, you can define relations manualy, like shown below.
 
 After creating and configure the connection to IRIS, it's time to setup a simple dashboard.
 
-First, select a chart - I've selected clustered bar chart. Then, you need to define data for axis and values - the vertical and horizontal axes respectivelly in this type of chart.
+First, select a chart - I've selected clustered bar chart. Then, you need to define data for axis and values - the vertical and horizontal axes respectively in this type of chart.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_ilwK5ns7b5_labeled.png"></img>
 
