@@ -1,5 +1,7 @@
 # Steps for connection IRIS as a Power BI data source
 
+*Note: this document was created on a previous cube version and the dimensions shown below aren't available anymore. However, you can follow the same steps and easily adapt them to the new structure.*
+
 ## Install Power BI Desktop
 
 This example uses Microsoft Power BI Desktop. You can get a trial version [here](https://powerbi.microsoft.com/en-us/get-started/).

@@ -8,6 +8,8 @@ If you need more information on setting up conection between IRIS and Power BI (
 
 So, let's started.
 
+*Note: this document was created on a previous cube version and the dimensions shown below aren't available anymore. However, you can follow the same steps and easily adapt them to the new structure.*
+
 ## 1) Create a connection to IRIS or open a previous one in Power BI
 
 In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](power-bi-config.md).
