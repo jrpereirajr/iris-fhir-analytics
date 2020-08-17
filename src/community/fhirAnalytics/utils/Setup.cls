@@ -5,7 +5,7 @@ ClassMethod SetupDSTIME()
 {
   $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("HSFHIR.I0001.S.Patient"))
   $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("HSFHIR.I0001.S.AllergyIntolerance"))
-  $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("community.fhirAnalytics.deepsee.table.PatientTable"))
+  $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("community.fhirAnalytics.deepsee.table.PatientCubeSource"))
   $$$THROWONERROR(st, $System.OBJ.Compile("community.fhirAnalytics.deepsee.cube.PatientCube", "ck"))
 }
 
