@@ -5,16 +5,20 @@ Class community.fhirAnalytics.deepsee.cube.PatientCube Extends %DeepSee.CubeDefi
 /// Cube definition from Architect.
 XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
 {
-<cube xmlns="http://www.intersystems.com/deepsee" name="Patient" displayName="Patient" disabled="false" abstract="false" sourceClass="community.fhirAnalytics.deepsee.table.PatientCubeSource" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
+<cube xmlns="http://www.intersystems.com/deepsee" name="Patient" displayName="Patient" disabled="false" abstract="false" sourceClass="community.fhirAnalytics.deepsee.table.PatientCubeSource" actionClass="community.fhirAnalytics.deepsee.kpi.PatientDetailsAction" namedFactNums="true" countMeasureName="%COUNT" bucketSize="8" bitmapChunkInMemory="false" precompute="0" disableListingGroups="false" enableSqlRestrict="false">
   <dimension name="PatientKeyD" displayName="PatientKeyD" disabled="false" hasAll="false" allCaption="All Key" allDisplayName="Key" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="PatientKey" displayName="PatientKey" disabled="false" sourceProperty="PatientId.Key" factName="DxPatientKey" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="2">
+        <property name="PatientResourceId" displayName="Patient Resource Id" disabled="false" sourceProperty="PatientId._id" factName="DxPatientResourceId" hidden="false" isName="false" isDescription="false" isReference="false" useDisplayValue="false">
+        </property>
       </level>
     </hierarchy>
   </dimension>
   <dimension name="PatientAllergyIntoleranceKeyD" displayName="PatientAllergyIntoleranceKeyD" disabled="false" hasAll="false" allCaption="All AllergyIntoleranceId" allDisplayName="AllergyIntoleranceId" type="data" calendar="gregorian" iKnowType="entity" hidden="false" showHierarchies="default">
     <hierarchy name="H1" disabled="false" hidden="false">
       <level name="AllergyIntoleranceKey" displayName="AllergyIntoleranceKey" disabled="false" sourceProperty="AllergyIntoleranceId.Key" factName="DxAllergyIntoleranceKey" list="false" useDisplayValue="true" useAsFilter="true" hidden="false" factNumber="3">
+        <property name="AllergyIntoleranceResourceId" displayName="Allergy Intolerance Resource Id" disabled="false" sourceProperty="AllergyIntoleranceId._id" factName="DxAllergyIntoleranceResourceId" hidden="false" isName="false" isDescription="false" isReference="false" useDisplayValue="false">
+        </property>
       </level>
     </hierarchy>
   </dimension>
@@ -54,6 +58,8 @@ XData Cube [ XMLNamespace = "http://www.intersystems.com/deepsee" ]
   </calculatedMember>
   <calculatedMember name="PatientCount" displayName="Patient Count" disabled="false" dimension="Measures" valueExpression="%mdx(&quot;SELECT NON EMPTY COUNT([PatientKeyD].[H1].[PatientKey].Members, EXCLUDEEMPTY) ON 0 FROM [PATIENT] %FILTER [PatientKeyD].[H1].[PatientKey].&amp;[&lt;null&gt;].%NOT&quot;,&quot;%CONTEXT&quot;)" hidden="false">
   </calculatedMember>
+  <listing name="PatientResourceIdListing" disabled="false" listingType="table" fieldList="PatientId-&gt;_id">
+  </listing>
 </cube>
 }
 

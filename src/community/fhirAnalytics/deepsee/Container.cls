@@ -85,18 +85,48 @@ XData Contents [ XMLNamespace = "http://www.intersystems.com/deepsee/library" ]
       <dataProperty name="" label="$auto" width="" align="" subtype="" style="" display="" format="" showAs="" valueColumn="false" summary="" summaryValue="" dataValue="Patient/Allergy Intolerance Count" targetValue="" thresholdLower="" thresholdUpper="" rangeLower="" rangeUpper="" baseValue="" override=""></dataProperty>
     </widget>
     <widget name="Widget2" type="pivot" subtype="barChart" subtypeClass="barChart" title="" dataSource="User/PatientGender.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="2" homeColL="0" colSpanL="5" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+      <control name="" action="applyFilter" target="Widget1" targetProperty="[PatientGenderD].[H1].[Gender]" location="click" type="auto" controlClass="" label="Gender" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget3" targetProperty="[PatientGenderD].[H1].[Gender]" location="click" type="auto" controlClass="" label="Gender" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget4" targetProperty="[PatientGenderD].[H1].[Gender]" location="click" type="auto" controlClass="" label="Gender" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="GoToReport" target="" targetProperty="http://localhost:32783/csp/user/fhirUI3/FHIRAppDemo.html?PatientList=705,172" location="dashboard" type="auto" controlClass="" label="View patients" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
       <property name="legendPos">none</property>
       <property name="showDimensions">0</property>
       <override name="barChart">{legendVisible:'false',subtitle:'Patient Gender',xAxis:{_type:'axis'},yAxisList:[{labelPosition:'left',_type:'axis'}],chartPivot:true,_type:'barChart'}</override>
       <override name="legend">{hidden:true,legendLabels:'Patient Count,Patient/Allergy Intolerance Count',legendPosition:'right',_type:'chartLegend'}</override>
     </widget>
     <widget name="Widget3" type="pivot" subtype="barChart" subtypeClass="barChart" title="" dataSource="User/PatientAge.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="2" homeColL="5" colSpanL="5" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+      <control name="" action="applyFilter" target="Widget1" targetProperty="[PatientAgeD].[H1].[Age]" location="click" type="auto" controlClass="" label="Age" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget2" targetProperty="[PatientAgeD].[H1].[Age]" location="click" type="auto" controlClass="" label="Age" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget4" targetProperty="[PatientAgeD].[H1].[Age]" location="click" type="auto" controlClass="" label="Age" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
       <property name="drillDown">1</property>
       <property name="legendPos">none</property>
       <override name="barChart">{legendVisible:'false',subtitle:'Patient Age',xAxis:{_type:'axis'},yAxisList:[{_type:'axis'}],chartPivot:true,_type:'barChart'}</override>
       <override name="legend">{hidden:true,legendLabels:'Patient Count,Patient/Allergy Intolerance Count',legendPosition:'right',_type:'chartLegend'}</override>
     </widget>
     <widget name="Widget4" type="pivot" subtype="barChart" subtypeClass="barChart" title="" dataSource="User/PatientAddress.pivot" dataLink="" drillDownDataSource="" width="200" height="200" sidebarContent="" showSidebar="false" sidebarWidth="" maximized="false" homeRowL="6" homeColL="0" colSpanL="10" rowSpanL="4" showToolbar="true" showToolbarBottomBorder="true" showToolbarOnlyWhenMaximized="false" colorToolbar="#F0F0F0" opacityToolbar="1" backgroundColor="#F0F0F0" opacity="1" theme="" dataColorList="">
+      <control name="" action="applyFilter" target="Widget1" targetProperty="[PatientAddressD].[H1].[PatientCityD]" location="click" type="auto" controlClass="" label="Patient City" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget2" targetProperty="[PatientAddressD].[H1].[PatientCityD]" location="click" type="auto" controlClass="" label="Patient City" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
+      <control name="" action="applyFilter" target="Widget3" targetProperty="[PatientAddressD].[H1].[PatientCityD]" location="click" type="auto" controlClass="" label="Patient City" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
       <property name="drillDown">1</property>
     </widget>
   </dashboard>
