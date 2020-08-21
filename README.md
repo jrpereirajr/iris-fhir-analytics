@@ -4,12 +4,11 @@ An example on how to use IRIS for Health FHIR SQL schema to build analytics feat
 
 ## What's ready?
 
-* A sample FHIR server setup on an IRIS for Health instance.
-* A POC for:
-  * A simple cube, pivot table and dashboard for patients using IRIS Analytics (formerly known as DeepSee);
-  * Create a cube manager.
+* **FHIR Server REST API usage** for create a simple cube, pivot tables and dashboard for patients using IRIS Analytics (formerly known as DeepSee)
   * [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb) support
   * An example for setup a dashboard in Microsoft Power BI
+* **FHIR Server REST API usage** for get details about patient from analytics context
+* **Docker container usage** for easy deploy
 
 ## Installing
 
@@ -46,6 +45,8 @@ http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardV
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/Lt94eO0NZa.gif"></img>
 
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/d2kAcL27Uo.gif"></img>
+
 This same dashboard can be viewed using [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb):
 
 ```
@@ -57,3 +58,11 @@ http://localhost:32783/dsw/index.html#!/d/User/Patient.dashboard?ns=FHIRSERVER
 You can also use cube create for FHIR data to feed up a Microsoft Power BI dashboard (instructions [here](doc/power-bi-creating-patient-dashboard.md)).
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/xUxNmpMvvQ.gif"></img>
+
+FHIR REST API support is used to view patients details in drill througth operations:
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/5y80LWQD7H.gif"></img>
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/hm33IIGQWl.gif"></img>
+
+More information on how to use FHIR REST API with DeepSee and Power BI [here](doc/fhir-rest-api.md).
