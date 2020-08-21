@@ -4,7 +4,7 @@ An example on how to use IRIS for Health FHIR SQL schema to build analytics feat
 
 ## What's ready?
 
-* **FHIR Server REST API usage** for create a simple cube, pivot tables and dashboard for patients using IRIS Analytics (formerly known as DeepSee)
+* **FHIR SQL Schema usage** for create a simple cube, pivot tables and dashboard for patients using IRIS Analytics (formerly known as DeepSee)
   * [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb) support
   * An example for setup a dashboard in Microsoft Power BI
 * **FHIR Server REST API usage** for get details about patient from analytics context
