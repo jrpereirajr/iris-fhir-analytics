@@ -122,7 +122,7 @@ Finally, we need to setup a control in the IRIS Analytics dashboard to use this 
 Note that in order to the KPI being available to the widget's actions, such KPI was setup as the default KPI action for the cube in its "actionClass" property.
 The picture below, show such configuration:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/yls3kZjO1q.gif"></img>
+<img src="hhttps://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/yls3kZjO1q.gif"></img>
 
 Checkout the classes [PatientDetailsAction](community.fhirAnalytics.src/community/fhirAnalytics/deepsee/kpi/PatientDetailsAction.cls), [ViewPatients](src/community/fhirAnalytics/deepsee/kpi/ViewPatients.cls) and [PatientCube](src\community\fhirAnalytics\deepsee\cube\PatientCube.cls) for more information.
 
@@ -157,4 +157,4 @@ Now you can perform some filtering and view the patients by clicking in the butt
 
 The whole process is depicted below:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/RB4qgvGisH.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/RB4qgvGisH.gif"></img>

@@ -43,9 +43,9 @@ A simple IRIS Analytics patient dashboard will also be available in this URL:
 http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Patient.dashboard
 ```
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/Lt94eO0NZa.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/Lt94eO0NZa.gif"></img>
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/d2kAcL27Uo.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/d2kAcL27Uo.gif"></img>
 
 This same dashboard can be viewed using [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb):
 
@@ -53,16 +53,16 @@ This same dashboard can be viewed using [DeepSeeWeb](https://openexchange.inters
 http://localhost:32783/dsw/index.html#!/d/User/Patient.dashboard?ns=FHIRSERVER
 ```
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/lN0F0MSNJr.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/lN0F0MSNJr.gif"></img>
 
 You can also use cube create for FHIR data to feed up a Microsoft Power BI dashboard (instructions [here](doc/power-bi-creating-patient-dashboard.md)).
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/xUxNmpMvvQ.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/xUxNmpMvvQ.gif"></img>
 
 FHIR REST API support is used to view patients details in drill througth operations:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/5y80LWQD7H.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/5y80LWQD7H.gif"></img>
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/power-bi-01/img/hm33IIGQWl.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/hm33IIGQWl.gif"></img>
 
 More information on how to use FHIR REST API with DeepSee and Power BI [here](doc/fhir-rest-api.md).
