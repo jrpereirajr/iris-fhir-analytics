@@ -7,14 +7,14 @@ Class community.fhirAnalytics.deepsee.kpi.PatientDetailsAction Extends %DeepSee.
 XData KPI [ XMLNamespace = "http://www.intersystems.com/deepsee/kpi" ]
 {
 <kpi xmlns="http://www.intersystems.com/deepsee/kpi" name="Patient Actions">
-<action name="GoToReport" displayName="Open patient report" />
+<action name="GoToReport" displayName="GoToReport" />
 <property name="PatCount" displayName="PatCount" />
 </kpi>
 }
 
 ClassMethod GetPatientsResourceIdList(pContext As %ZEN.proxyObject) As %List
 {
-  Set mdx = "drillthrough SELECT FROM "_$Piece(pContext.%data("mdx"),"FROM ", 2)_" "_pContext.%data("currFilterSpec")
+  Set mdx = "DRILLTHROUGH SELECT FROM "_$Piece(pContext.%data("mdx"),"FROM ", 2)_" "_pContext.%data("currFilterSpec")
   Set rs = ##class(%DeepSee.ResultSet).%New()
   $$$THROWONERROR(st, rs.%PrepareMDX(mdx))
   $$$THROWONERROR(st, rs.%Execute())
