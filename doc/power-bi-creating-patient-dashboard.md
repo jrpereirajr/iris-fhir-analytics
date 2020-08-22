@@ -10,25 +10,25 @@ So, let's started.
 
 *Note: this document was created on a previous cube version and the dimensions shown below aren't available anymore. However, you can follow the same steps and easily adapt them to the new structure.*
 
-## 1) Create a connection to IRIS or open a previous one in Power BI
+## Creating a connection to IRIS or open a previous one in Power BI
 
-In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to this [document](power-bi-config.md).
+In this case, I've used a previous connection to IRIS. If you need help in order to create a new one, please refer to [document](power-bi-config.md).
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_mAmrs4UJlj.png"></img>
 
-## 2) Select fact and dimensions tables as source for the dashboard
+## Selecting fact and dimensions tables as source for the dashboard
 
 The IRIS connector for Power BI retrieves the star schema for cubes within the namespace defined in connection parameters. So, you can select the fact table and its dimensions as source for your dashboard.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_1VhPiBsYpR.png"></img>
 
-## 3) Import or create a link to data
+## Import or create a link to data
 
 You can import data or create a link to it in IRIS server. In this case, I chose the direct link option instead of import data.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/vlc_UEZuJjhAEc.png"></img>
 
-## 4) Check tables relationship
+## Check tables relationship
 
 For some reason, some relations between star schema tables should not be recognized by Power BI. Without such relations, features like drill down could not work properly.
 
@@ -40,7 +40,7 @@ If something was missed, you can define relations manually, like shown below.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/8bxuLiWpZK.gif"></img>
 
-## 5) Setup the dashboard
+## Setup a dashboard
 
 After creating and configure the connection to IRIS, it's time to setup a simple dashboard.
 
@@ -53,3 +53,30 @@ Note that measures defined in fact table was automatically recognized. A measure
 If relations between tables was corrected imported and setup, Power BI can automatically infer drill down logic, as shown below.
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/JOauZ4scuB.gif"></img>
+
+## Linking to an external web page
+
+Optionally, you can use filters applied to the dashboard as input for feed up external Web pages. In order to do that, create a new measure and follow the steps illustrated below:
+
+```objectscript
+SelectedPatientsResourceList = 
+// Create a measure called SelectedPatientsResourceList which generates a URL to a Web interface, passing out the selected patients resources IDs
+CONCATENATE(
+    "http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html?PatientList=", 
+    CONCATENATEX(
+        // Filter DxPatientKey table by IDs in selected ones in field DxPatientKey of Fact table
+        FILTER(
+            'DxPatientKey', 
+            'DxPatientKey'[ID] IN VALUES('Fact'[DxPatientKey])
+        ), 
+        // Use values in DxPatientResourceId column for concatenation
+        'DxPatientKey'[DxPatientResourceId],
+        // Concatenates using a comma as separator
+	    ","
+    )
+)
+```
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/RB4qgvGisH.gif"></img>
+
+In this example a page using FHIR REST API is used to show patients information. More information [here](fhir-rest-api.md).
