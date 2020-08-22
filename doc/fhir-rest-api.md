@@ -124,7 +124,7 @@ The picture below, show such configuration:
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/yls3kZjO1q.gif"></img>
 
-Checkout the classes [PatientDetailsAction](../src/community/fhirAnalytics/deepsee/kpi/PatientDetailsAction.cls), [ViewPatients](../src/community/fhirAnalytics/deepsee/kpi/ViewPatients.cls) and [PatientCube](..\src\community\fhirAnalytics\deepsee\cube\PatientCube.cls) for more information.
+Checkout the classes [PatientDetailsAction](../src/community/fhirAnalytics/deepsee/kpi/PatientDetailsAction.cls), [ViewPatients](../src/community/fhirAnalytics/deepsee/kpi/ViewPatients.cls) and [PatientCube](../src/community/fhirAnalytics/deepsee/cube/PatientCube.cls) for more information.
 
 ## Calling the Web interface from Power BI
 
