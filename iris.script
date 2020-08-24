@@ -17,6 +17,8 @@ Do ##class(HS.FHIRServer.Installer).InstallNamespace()
 
 // Install an instance of a FHIR Service into the current namespace
 Do ##class(HS.FHIRServer.Installer).InstallInstance(appKey, strategyClass, metadataConfigKey,"",0)
+Do ##class(Ens.Director).StopProduction()
+ZWrite ##class(Ens.Director).SetAutoStart("FHIRSERVERPKG.FoundationProduction", 0)
 
 set strategy = ##class(HS.FHIRServer.API.InteractionsStrategy).GetStrategyForEndpoint(appKey)
 set config = strategy.GetServiceConfigData()

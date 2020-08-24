@@ -2,13 +2,14 @@
 
 An example on how to use IRIS for Health FHIR SQL schema to build analytics features.
 
-## What's ready?
+## What you'll find in this technology example?
 
 * **FHIR SQL Schema usage** for create a simple cube, pivot tables and dashboard for patients using IRIS Analytics (formerly known as DeepSee)
   * [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb) support
   * An example for setup a dashboard in Microsoft Power BI
 * **FHIR Server REST API usage** for get details about patient from analytics context
-* **Docker container usage** for easy deploy
+* **Healthcare standards transformations** - use an IRIS Interoperability production to import messages in ADT/HL7 format and convert them to FHIR messages (thanks for [grongierisc](https://github.com/grongierisc/FHIR-HL7v2-SQL-Demo))
+* **Docker container usage** configuration for easy deploy
 
 ## Installing
 
@@ -66,3 +67,7 @@ FHIR REST API support is used to view patients details in drill througth operati
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/hm33IIGQWl.gif"></img>
 
 More information on how to use FHIR REST API with DeepSee and Power BI [here](doc/fhir-rest-api.md).
+
+In order to healthcare standards transformations, a IRIS Interoperability production was setup. To see that in action import ADT messages in data directory, like show below:
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/hm33IIGQWl.gif"></img>
