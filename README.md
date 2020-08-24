@@ -70,4 +70,4 @@ More information on how to use FHIR REST API with DeepSee and Power BI [here](do
 
 In order to healthcare standards transformations, a IRIS Interoperability production was setup. To see that in action import ADT messages in data directory, like show below:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/hm33IIGQWl.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/speoEKCUPO.gif"></img>
