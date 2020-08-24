@@ -7,6 +7,10 @@ ClassMethod SetupDSTIME()
   $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("HSFHIR.I0001.S.AllergyIntolerance"))
   $$$THROWONERROR(st, ##class(community.fhirAnalytics.utils.DSTIME).InjectDSTIME("community.fhirAnalytics.deepsee.table.PatientCubeSource"))
   $$$THROWONERROR(st, $System.OBJ.Compile("community.fhirAnalytics.deepsee.cube.PatientCube", "ck"))
+
+  // In order to cubes recognize DSTIME paramter, they need to be recompiled
+  $$$THROWONERROR(st, $System.OBJ.Compile("community.fhirAnalytics.deepsee.cube.HSFHIRPatient", "ck"))
+  $$$THROWONERROR(st, $System.OBJ.Compile("community.fhirAnalytics.deepsee.cube.HSFHIRAllergyIntolerance", "ck"))
 }
 
 ClassMethod SetupCubeRegistry()

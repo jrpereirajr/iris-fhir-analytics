@@ -50,6 +50,52 @@ ClassMethod Load() As %Status
   Return $$$OK
 }
 
+ClassMethod SynchronizeHSFHIRPatient() As %Status
+{
+  Set source = "HSFHIR.I0001.S.Patient"
+  Set dsInterval = $O(^OBJ.DSTIME(source, ""))
+  While (dsInterval '= "") {
+    Set id = $O(^OBJ.DSTIME(source, dsInterval, ""))
+    While (id '= "") {
+      Set idList = ""
+      &sql(
+        SELECT %DList(ID) INTO :idList
+        FROM community_fhirAnalytics_deepsee_table.PatientCubeSource
+        WHERE PatientId = :id
+      )
+      Set len = $LL(idList)
+      For i = 1:1:len {
+        Set ^OBJ.DSTIME("community.fhirAnalytics.deepsee.table.PatientCubeSource", dsInterval, $LG(idList, i)) = 1
+      }
+      Set id = $O(^OBJ.DSTIME(source, dsInterval, id))
+    }
+    Set dsInterval = $O(^OBJ.DSTIME(source, dsInterval))
+  }
+}
+
+ClassMethod SynchronizeHSFHIRAllergyIntolerance() As %Status
+{
+  Set source = "HSFHIR.I0001.S.AllergyIntolerance"
+  Set dsInterval = $O(^OBJ.DSTIME(source, ""))
+  While (dsInterval '= "") {
+    Set id = $O(^OBJ.DSTIME(source, dsInterval, ""))
+    While (id '= "") {
+      Set idList = ""
+      &sql(
+        SELECT %DList(ID) INTO :idList
+        FROM community_fhirAnalytics_deepsee_table.PatientCubeSource
+        WHERE AllergyIntoleranceId = :id
+      )
+      Set len = $LL(idList)
+      For i = 1:1:len {
+        Set ^OBJ.DSTIME("community.fhirAnalytics.deepsee.table.PatientCubeSource", dsInterval, $LG(idList, i)) = 1
+      }
+      Set id = $O(^OBJ.DSTIME(source, dsInterval, id))
+    }
+    Set dsInterval = $O(^OBJ.DSTIME(source, dsInterval))
+  }
+}
+
 Storage Default
 {
 <Data name="PatientCubeSourceDefaultData">
