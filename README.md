@@ -34,9 +34,9 @@ docker-compose up -d
 
 After installation, some data will be uploaded to IRIS for Health. Wait for IRIS initialization and then you can explorer data using analytics tools and nice UI frameworks specific for detail FHIR data, like [fhir-ui](https://github.com/healthintellect/fhir-ui) for instance:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/fIXdOhasCS.png"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/fIXdOhasCS.gif"></img>
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/qZpmWkm2qG.png"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/qZpmWkm2qG.gif"></img>
 
 More information on how to use FHIR REST API with DeepSee and Power BI [here](https://github.com/jrpereirajr/iris-fhir-analytics/tree/master/doc/fhir-rest-api.md).
 
@@ -64,7 +64,7 @@ You can also use cube created for FHIR data to feed up a Microsoft Power BI dash
 
 Analytics capabilities are possibile thanks to IRIS FHIR SQL schema:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris4health-fhir-analytics/master/img/Screenshot_36.png"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/Screenshot_36.png"></img>
 
 More information on FHIR SQL schema can be found [here](https://github.com/jrpereirajr/iris-fhir-analytics/tree/master/doc/fhir-sql-schema.md).
 
