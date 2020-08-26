@@ -14,10 +14,8 @@ USER ${ISC_PACKAGE_MGRUSER}
 COPY src src
 COPY data/fhir fhirdata
 COPY iris.script /tmp/iris.script
-# Copy fhiranalytics ZPM module
-# TODO: remove after publish in ZPM
-# COPY ./module.xml /tmp/module.xml
-COPY fhirUI /usr/irissys/csp/user/fhirUI
+#COPY fhirUI/original /usr/irissys/csp/user/fhirUI
+COPY fhirUI/react-fhir-ui/build/ /usr/irissys/csp/user/fhirUI/
 
 # run iris and initial 
 RUN iris start IRIS \

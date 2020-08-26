@@ -1,6 +1,55 @@
 # Using FHIR REST API to show patients information
 
-In order to illustrate how to use FHIR REST API, I adapted a previous provided Web interface to receive a patient list from analytics tools and display basic information about them.
+When you're using a standard like FHIR, you could tak advantages also in stardard UI. So you can easily plug nice UI into your application.
+
+In order to illustrate how to use FHIR REST API, I adapted a UI framework based on Google Material Design - [fhir-ui](https://github.com/healthintellect/fhir-ui), to receive a patient list from analytics tools and display basic information about them.
+
+This UI framework is specific for FHIR data, which means that you can get information returned by IRIR FHIR API and present it to the interface, with almost no need to futher processing.
+
+```xml
+<MyPatientTable
+  patients={patients}
+  tableTitle="Patient List"
+  tableRowSize="small"
+  defaultRowsPerPage={5}
+  onGetDetailsData={getPatientDetails}
+/>
+```
+
+Here, the patient property is a instance of FHIR resouce of type Patient:
+
+```json
+{
+  "resourceType": "Patient",
+  "name": [
+    {
+      "text": "Cersi Lannister",
+      "prefix": [
+        "Queen"
+      ],
+      "family": [
+        "Lannister"
+      ],
+      "given": [
+        "Cersi"
+      ],
+      "suffix": [
+        "Baratheon"
+      ],
+      "resourceType": "HumanName"
+    }
+  ],
+  "active": true,
+  "birthDate": "1973-10-03",
+  "gender": "female",
+  ...
+  ```
+
+Futhermore, the modern UI frameworks make easy provide features like responsive design:
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/m9T1sQwc94.gif"></img>
+
+The web interface was developed using React JS; the project are availble [here](../fhirUI\react-fhir-ui).
 
 ## The Web interface
 
@@ -9,7 +58,7 @@ The interface receives a comma-separated list in it query string and uses FHIR R
 The query string looks like this:
 
 ```
-http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html?PatientList=1,172
+http://localhost:32783/csp/user/fhirUI/index.html?PatientList=1,172
 ```
 
 First, the patient list is retrieved from query string:
@@ -30,22 +79,47 @@ After applied to the previous query string, this code produces an object like th
 Then, such list it's used to setup a FHIR REST call:
 
 ```js
-client.search({
-  type: 'Patient',
-  query: {
-    _id: qs.PatientList
-  }
-}).then(function (patients) {
-  // display retrieved patients
-  (patients.data.entry || []).forEach(function (patient) {
-    var row = patientTable.insertRow();
-    var nameCell = row.insertCell(0);
-    var idCell = row.insertCell(1);
-
-    nameCell.innerHTML = `<a href="#" onclick="plotThis(${patient.resource.id})">${getName(patient.resource)}</a>`;
-    idCell.innerHTML = `<a href="#" onclick="plotThis(${patient.resource.id})">${patient.resource.id}</a>`;
-  });
-});
+const getPatientDetails = (patientInfo, resourceType) => {
+	if (!patientInfo || !patientInfo.id) return Promise.resolve();
+	const base = 'http://localhost:32783/fhir/r4';
+	let url = '';
+	let formatter = (obj) => (obj.entry || []).map(e => e.resource);
+	switch(resourceType) {
+		case 'Bundle':
+			url = `${base}/Patient?_id=${patientInfo.id}`;
+			formatter = (obj) => obj;
+			break;
+		case 'Patient':
+			url = `${base}/Patient?_id=${patientInfo.id}`;
+			break;
+		case 'AllergyIntolerance':
+			url = `${base}/Patient/${patientInfo.id}/AllergyIntolerance`;
+			break;
+		case 'Conditions':
+			url = `${base}/Patient/${patientInfo.id}/Condition`;
+			break;
+		case 'Observations':
+			url = `${base}/Patient/${patientInfo.id}/Observation`;
+			break;
+	}
+	return fetch(url, {
+		"headers": {
+			"accept": "application/fhir+json",
+			"cache-control": "no-cache",
+			"content-type": "application/fhir+json;charset=UTF-8",
+			"pragma": "no-cache",
+			"sec-fetch-dest": "empty",
+			"sec-fetch-mode": "cors",
+			"x-requested-with": "XMLHttpRequest"
+		},
+		"referrer": "http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html?$ZEN_POPUP=1&$ZEN_SOFTMODAL=1&PatientList=1,172,459,705,1002,1510,1984,1996",
+		"referrerPolicy": "no-referrer-when-downgrade",
+		"body": null,
+		"method": "GET",
+		"mode": "cors",
+		"credentials": "include"
+	}).then(r => r.json()).then(formatter);
+}
 ```
 
 Now, the interface it's ready to be called by analytics tools.
@@ -112,7 +186,7 @@ The ZEN page acts just like a forwarder class, redirecting the request to the We
 ```objectscript
 Method DrawRedirect(pSeed As %String) As %Status
 {
-  Set redirectURL = "http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html"
+  Set redirectURL = "http://localhost:32783/csp/user/fhirUI/index.html"
   Write "<script language=""JavaScript"" type=""text/javascript"">location.href=`"_redirectURL_"?${window.location.search.substr(1)}`;</script>"
   Return $$$OK
 }
@@ -136,7 +210,7 @@ First we need a metric which will setup the URL to the Web interface with the se
 SelectedPatientsResourceList = 
 // Create a measure called SelectedPatientsResourceList which generates a URL to a Web interface, passing out the selected patients resources IDs
 CONCATENATE(
-    "http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html?PatientList=", 
+    "http://localhost:32783/csp/user/fhirUI/index.html?PatientList=", 
     CONCATENATEX(
         // Filter DxPatientKey table by IDs in selected ones in field DxPatientKey of Fact table
         FILTER(

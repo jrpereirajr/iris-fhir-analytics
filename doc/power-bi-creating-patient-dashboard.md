@@ -62,7 +62,7 @@ Optionally, you can use filters applied to the dashboard as input for feed up ex
 SelectedPatientsResourceList = 
 // Create a measure called SelectedPatientsResourceList which generates a URL to a Web interface, passing out the selected patients resources IDs
 CONCATENATE(
-    "http://localhost:32783/csp/user/fhirUI/FHIRAppDemo.html?PatientList=", 
+    "http://localhost:32783/csp/user/fhirUI/index.html?PatientList=", 
     CONCATENATEX(
         // Filter DxPatientKey table by IDs in selected ones in field DxPatientKey of Fact table
         FILTER(

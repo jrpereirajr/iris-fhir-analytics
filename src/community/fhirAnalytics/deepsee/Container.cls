@@ -94,7 +94,7 @@ XData Contents [ XMLNamespace = "http://www.intersystems.com/deepsee/library" ]
       <control name="" action="applyFilter" target="Widget4" targetProperty="[PatientGenderD].[H1].[Gender]" location="click" type="auto" controlClass="" label="Gender" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
         <valueRequired>false</valueRequired>
       </control>
-      <control name="" action="GoToReport" target="" targetProperty="http://localhost:32783/csp/user/fhirUI3/FHIRAppDemo.html?PatientList=705,172" location="dashboard" type="auto" controlClass="" label="View patients" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+      <control name="" action="GoToReport" target="" targetProperty="http://localhost:32783/csp/user/fhirUI/index.html" location="dashboard" type="auto" controlClass="" label="View patients" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
         <valueRequired>false</valueRequired>
       </control>
       <property name="legendPos">none</property>
