@@ -24,7 +24,3 @@ These steps are shown below. Please, note that the super server port has changed
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/esNeBGOCPp.gif"></img>
 
 If you're having difficulty with Portuguese labels, you can find instructions in English [here](https://youtu.be/MmrePiLBDac?t=1858).
-
-## Using a ODBC source instead of IRIS plugin
-
-todo:
