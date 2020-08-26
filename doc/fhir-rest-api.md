@@ -49,7 +49,7 @@ Futhermore, the modern UI frameworks make easy provide features like responsive 
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/m9T1sQwc94.gif"></img>
 
-The web interface was developed using React JS; the project are availble [here](../fhirUI\react-fhir-ui).
+The web interface was developed using React JS; the project are availble [here](https://github.com/jrpereirajr/iris-fhir-analytics/tree/master/fhirUI/react-fhir-ui).
 
 ## The Web interface
 
