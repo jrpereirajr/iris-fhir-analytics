@@ -73,4 +73,4 @@ FROM HSFHIR_I0001_R.Rsrc where Key = 'Observation/16'
 ```
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_1DvEDXHXAj.png"></img>
 
-Another useful SQL examples can be found [here](../misc/sql/example.sql).
+Another useful SQL examples can be found [here](../misc/sql/example.sql) and [here](fhir-inconsistencies.md).

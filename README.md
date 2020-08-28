@@ -8,6 +8,7 @@ An example on how to use IRIS for Health FHIR SQL schema to build analytics feat
 * **FHIR SQL Schema usage** for create a simple cube, pivot tables and dashboard for patients using IRIS Analytics (formerly known as DeepSee)
   * [DeepSeeWeb](https://openexchange.intersystems.com/package/DeepSeeWeb) support
   * An example for setup a dashboard in Microsoft Power BI
+  * Using complexy queries to find inconsistencies in data, [check it out](https://github.com/jrpereirajr/iris-fhir-analytics/tree/master/doc/fhir-inconsistencies.md)
 * **Healthcare standards transformations** - use an IRIS Interoperability production to import messages in ADT/HL7 format and convert them to FHIR messages (thanks for [grongierisc](https://github.com/grongierisc/FHIR-HL7v2-SQL-Demo))
 * **Docker container usage** configuration for easy deploy
 
