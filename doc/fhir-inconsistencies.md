@@ -1,10 +1,10 @@
 # Finding inconsistencies in FHIR data
 
-A useful usage for FHIR unified schema is search for incosistencies. As suggested by [Qi Li](https://community.intersystems.com/user/qi-li), on example could be find patients with records for diabetes medication, however without diabetes condition.
+A useful usage for FHIR unified schema is search for inconsistencies. As suggested by [Qi Li](https://community.intersystems.com/user/qi-li), on example could be find patients with records for diabetes medication, however without diabetes condition.
 
 Another example is search conditions with findings (like diabetes, for instance) and a record for resources denoting "no known problems", e.g., SNOMED CT: "160245001 |No current problems or disability (situation)|", as discussed in [HL7 FHIR documentation](https://www.hl7.org/fhir/condition.html#9.2.3.4).
 
-So, in order to deal with them, I setup two SQL KPIs for quering FHIR SQL schema and return resources which match to these kinds of inconsistencies. For input, I manually changed some files which are imported when the container is created.
+So, in order to deal with them, I setup two SQL KPIs for querying FHIR SQL schema and return resources which match to these kinds of inconsistencies. For input, I manually changed some files which are imported when the container is created.
 
 For diabetes medication inconsistence, I choose a patient without diabetes conditions and insert manually a diabetes medication. I found the medication code by searching for "snomed ct insulin".
 
@@ -37,7 +37,7 @@ For "no known problems" inconsistencies, I changed the file Adina377_Corkery305_
 ],
 ```
 
-Then, the two SQL shown below were setup. The first one get diabetes medication inconsistencies; the second, "no known problems" inconsistencies:
+Then, the two SQL shown below were setup. The first one gets diabetes medication inconsistencies; the second, "no known problems" inconsistencies:
 
 ```sql
 -- patients with diabetes medication but no diabetes condition
@@ -77,11 +77,11 @@ WHERE
 	AND $LISTLENGTH(code) > 2
   ```
 
-  Finally, I setup a dashboard where these information is diplayed. Note that two inconsistence issue was detected - one for each of them.
+  Finally, I setup a dashboard where this information is diplayed. Note that two inconsistence issue was detected - one for each of them.
 
   <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg"></img>
 
-  You can acess this dashboard by these links:
+  You can access this dashboard by these links:
 
   ```
   http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Inconsistencies.dashboard
