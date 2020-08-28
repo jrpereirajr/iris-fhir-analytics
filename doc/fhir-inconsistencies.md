@@ -6,7 +6,7 @@ Another example is search conditions with findings (like diabetes, for instance)
 
 So, in order to deal with them, I setup two SQL KPIs for querying FHIR SQL schema and return resources which match to these kinds of inconsistencies. For input, I manually changed some files which are imported when the container is created.
 
-For diabetes medication inconsistence, I choose a patient without diabetes conditions and insert manually a diabetes medication (file Mikel238_Dickinson688_62644b68-f18b-46e0-86f9-56b3cb2f6737.json). I found the medication code by searching for "snomed ct insulin".
+For diabetes medication inconsistence, I choose a patient without diabetes conditions and insert manually a diabetes medication (file [Mikel238_Dickinson688_62644b68-f18b-46e0-86f9-56b3cb2f6737.json](../data/fhir/Mikel238_Dickinson688_62644b68-f18b-46e0-86f9-56b3cb2f6737.json)). I found the medication code by searching for "snomed ct insulin".
 
 ```json
 "medicationCodeableConcept": {
@@ -20,7 +20,7 @@ For diabetes medication inconsistence, I choose a patient without diabetes condi
   "text": "Lantus 100 unit/ml injectable solution"
 ```
 
-For "no known problems" inconsistencies, I changed the file Adina377_Corkery305_cb12851a-2ebd-4c15-88a9-5bee0f308afc.json, and add a "160245001 |No current problems or disability|" record in an pre-existing "190905008" |Cystic Fibrosis|" condition.
+For "no known problems" inconsistencies, I changed the file [Adina377_Corkery305_cb12851a-2ebd-4c15-88a9-5bee0f308afc.json](../data/fhir/Adina377_Corkery305_cb12851a-2ebd-4c15-88a9-5bee0f308afc.json), and add a "160245001 |No current problems or disability|" record in an pre-existing "190905008" |Cystic Fibrosis|" condition.
 
 ```json
 "coding": [
