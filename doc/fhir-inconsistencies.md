@@ -79,7 +79,7 @@ WHERE
 
   These SQL feed up the KPIs [DiabetesMedicationInconsistence](../src/community/fhirAnalytics/deepsee/kpi/DiabetesMedicationInconsistence.cls) and [NoKnowProblemsInconsistence](../src/community/fhirAnalytics/deepsee/kpi/NoKnowProblemsInconsistence.cls), respectively.
 
-  Finally, I setup a dashboard where this information is diplayed. Note that two inconsistence issue was detected - one for each of them.
+  Finally, I setup a dashboard where this information is diplayed. Note that two inconsistencies issue were detected - one for each of them.
 
   <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg.png"></img>
 
