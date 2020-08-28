@@ -77,12 +77,16 @@ WHERE
 	AND $LISTLENGTH(code) > 2
   ```
 
+  These SQL feed up the KPIs [DiabetesMedicationInconsistence](../src/community/fhirAnalytics/deepsee/kpi/DiabetesMedicationInconsistence.cls) and [NoKnowProblemsInconsistence](../src/community/fhirAnalytics/deepsee/kpi/NoKnowProblemsInconsistence.cls), respectively.
+
   Finally, I setup a dashboard where this information is diplayed. Note that two inconsistence issue was detected - one for each of them.
 
-  <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg"></img>
+  <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg.png"></img>
 
   You can access this dashboard by these links:
 
   ```
   http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Inconsistencies.dashboard
+
+  http://localhost:32783/dsw/index.html#!/d/User/Inconsistencies.dashboard?ns=FHIRSERVER
   ```
