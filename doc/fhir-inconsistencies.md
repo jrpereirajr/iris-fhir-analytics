@@ -77,16 +77,18 @@ WHERE
 	AND $LISTLENGTH(code) > 2
   ```
 
-  These SQL feed up the KPIs [DiabetesMedicationInconsistence](../src/community/fhirAnalytics/deepsee/kpi/DiabetesMedicationInconsistence.cls) and [NoKnowProblemsInconsistence](../src/community/fhirAnalytics/deepsee/kpi/NoKnowProblemsInconsistence.cls), respectively.
+I found codes for diabetes conditions and medications in the CDC site, [here](https://phinvads.cdc.gov/vads/http:/phinvads.cdc.gov/vads/ViewCodeSystemConcept.action?oid=2.16.840.1.113883.6.96&code=96367001) and [here](https://phinvads.cdc.gov/vads/ViewCodeSystemConcept.action?oid=2.16.840.1.113883.6.96&code=73211009).
 
-  Finally, I setup a dashboard where this information is diplayed. Note that two inconsistencies issue were detected - one for each of them.
+These SQL feed up the KPIs [DiabetesMedicationInconsistence](../src/community/fhirAnalytics/deepsee/kpi/DiabetesMedicationInconsistence.cls) and [NoKnowProblemsInconsistence](../src/community/fhirAnalytics/deepsee/kpi/NoKnowProblemsInconsistence.cls), respectively.
 
-  <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg.png"></img>
+Finally, I setup a dashboard where this information is diplayed. Note that two inconsistencies issue were detected - one for each of them.
 
-  You can access this dashboard by these links:
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/chrome_ncTSj4WZrg.png"></img>
 
-  ```
-  http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Inconsistencies.dashboard
+You can access this dashboard by these links:
 
-  http://localhost:32783/dsw/index.html#!/d/User/Inconsistencies.dashboard?ns=FHIRSERVER
-  ```
+```
+http://localhost:32783/csp/healthshare/fhirserver/_DeepSee.UserPortal.DashboardViewer.zen?DASHBOARD=User/Inconsistencies.dashboard
+
+http://localhost:32783/dsw/index.html#!/d/User/Inconsistencies.dashboard?ns=FHIRSERVER
+```
