@@ -10,7 +10,7 @@ XData Contents [ XMLNamespace = "http://www.intersystems.com/zen" ]
 
 Method DrawRedirect(pSeed As %String) As %Status
 {
-  Set redirectURL = "http://localhost:32783/csp/user/fhirUI2/index.html"
+  Set redirectURL = "http://localhost:32783/csp/user/fhirUI/index.html"
   Write "<script language=""JavaScript"" type=""text/javascript"">location.href=`"_redirectURL_"?${window.location.search.substr(1)}`;</script>"
   Return $$$OK
 	/*
