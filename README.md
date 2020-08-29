@@ -33,7 +33,7 @@ docker-compose up -d
 
 ## Exploring it
 
-After installation, some data will be uploaded to IRIS for Health. Wait for IRIS initialization and then you can explorer data using analytics tools and nice UI frameworks specific for detail FHIR data, like [fhir-ui](https://github.com/healthintellect/fhir-ui) for instance:
+After installation, some data will be uploaded to IRIS for Health. Wait for IRIS initialization and then you can explorer data using analytics tools and nice UI frameworks specific for detail FHIR data, like [fhir-react](https://github.com/1uphealth/fhir-react#readme) or [fhir-ui](https://github.com/healthintellect/fhir-ui) for instance:
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/FVIjalYu9r.gif"></img>
 
