@@ -14,8 +14,8 @@ USER ${ISC_PACKAGE_MGRUSER}
 COPY src src
 COPY data/fhir fhirdata
 COPY iris.script /tmp/iris.script
-#COPY fhirUI/original /usr/irissys/csp/user/fhirUI
 COPY fhirUI/react-fhir-ui/build/ /usr/irissys/csp/user/fhirUI/
+COPY fhirUI/react-fhir-react/build/ /usr/irissys/csp/user/fhirUI2/
 
 # run iris and initial 
 RUN iris start IRIS \

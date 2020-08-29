@@ -2,7 +2,7 @@
 
 When you're using a standard like FHIR, you could tak advantages also in stardard UI. So you can easily plug nice UI into your application.
 
-In order to illustrate how to use FHIR REST API, I adapted a UI framework based on Google Material Design - [fhir-ui](https://github.com/healthintellect/fhir-ui), to receive a patient list from analytics tools and display basic information about them.
+In order to illustrate how to use FHIR REST API, I adapted a UI framework based on Google Material Design - [fhir-ui](https://github.com/healthintellect/fhir-ui), to receive a patient list from analytics tools and display basic information about them. To see a more complete UI framework, please [check this document out](https://github.com/jrpereirajr/iris-fhir-analytics/blob/master/doc/fhir-react.md) after read this one.
 
 This UI framework is specific for FHIR data, which means that you can get information returned by IRIR FHIR API and present it to the interface, with almost no need to futher processing.
 

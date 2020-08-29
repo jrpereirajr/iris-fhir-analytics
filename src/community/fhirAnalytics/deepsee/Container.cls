@@ -97,6 +97,9 @@ XData Contents [ XMLNamespace = "http://www.intersystems.com/deepsee/library" ]
       <control name="" action="GoToReport" target="" targetProperty="http://localhost:32783/csp/user/fhirUI/index.html" location="dashboard" type="auto" controlClass="" label="View patients" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
         <valueRequired>false</valueRequired>
       </control>
+      <control name="" action="GoToReport2" target="" targetProperty="" location="dashboard" type="auto" controlClass="" label="View patients +" title="" value="" text="" readOnly="false" valueList="" displayList="" activeWhen="">
+        <valueRequired>false</valueRequired>
+      </control>
       <property name="legendPos">none</property>
       <property name="showDimensions">0</property>
       <override name="barChart">{legendVisible:'false',subtitle:'Patient Gender',xAxis:{_type:'axis'},yAxisList:[{labelPosition:'left',_type:'axis'}],chartPivot:true,_type:'barChart'}</override>

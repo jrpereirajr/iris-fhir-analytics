@@ -8,6 +8,7 @@ XData KPI [ XMLNamespace = "http://www.intersystems.com/deepsee/kpi" ]
 {
 <kpi xmlns="http://www.intersystems.com/deepsee/kpi" name="Patient Actions">
 <action name="GoToReport" displayName="GoToReport" />
+<action name="GoToReport2" displayName="GoToReport2" />
 <property name="PatCount" displayName="PatCount" />
 </kpi>
 }
@@ -49,6 +50,10 @@ ClassMethod %OnDashboardAction(pAction As %String, pContext As %ZEN.proxyObject)
 {
   If (pAction="GoToReport") {
     Set pContext.command = "popup:community.fhirAnalytics.deepsee.kpi.ViewPatients.cls?PatientList="_$LTS(
+      ..GetPatientsResourceIdList(pContext), ","
+    )
+  } ElseIf (pAction="GoToReport2") {
+    Set pContext.command = "popup:community.fhirAnalytics.deepsee.kpi.ViewPatients2.cls?PatientList="_$LTS(
       ..GetPatientsResourceIdList(pContext), ","
     )
   }
