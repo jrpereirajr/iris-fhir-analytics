@@ -40,11 +40,11 @@ IRIS Analytics:
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/FVIjalYu9r.gif"></img>
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/xl4IBx5532.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/fIXdOhasCS.gif"></img>
 
 MS Power BI:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/fIXdOhasCS.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/xl4IBx5532.gif"></img>
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/qZpmWkm2qG.gif"></img>
 
