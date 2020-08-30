@@ -12,8 +12,9 @@ import {
 } from '@material-ui/core'
 import { lighten, makeStyles } from '@material-ui/core/styles'
 import { FhirResource, fhirVersions } from "fhir-react";
-import './index.css';
+import FhirResourceChart from './fhir-chart-react/components'
 
+import './index.css';
 // Import optional styles
 import "fhir-react/build/style.css";
 import "fhir-react/build/bootstrap-reboot.min.css";
@@ -95,8 +96,9 @@ class PatientRow extends React.Component {
     this.state = {
 			tabValue: 0,
 			isShowDetails: false,
+			isShowChart: false,
 			resourceTypes: [],
-			resources: []
+			resources: {}
 		};
   }
 	
@@ -133,17 +135,21 @@ class PatientRow extends React.Component {
 					acc[curr.resourceType].push(curr); 
 					return acc; 
 				}, {});
-			delete resources["Patient"]
+			delete resources["Patient"];
 			
 			this.setState({isShowDetails: !this.state.isShowDetails});
 			this.setState({resourceTypes: Object.keys(resources).sort()});
 			this.setState({resources: resources});
+			
+			this.handleChangeTab({}, 0);
 		});
 	}
 	
 	handleChangeTab(event, newValue) {
 		let promise = Promise.resolve();
-		promise.then(() => this.setState({tabValue: newValue}));
+		promise.then(() => {
+			this.setState({tabValue: newValue});
+		});
 	};
 	
   render() {
@@ -173,12 +179,16 @@ class PatientRow extends React.Component {
 							let resources = this.state.resources[resourceType] || [];
 							return(
 								<TabPanel value={this.state.tabValue} index={i}>
-									{resources.map(resource => {return (
+									<Button onClick={() => this.setState({isShowChart: !this.state.isShowChart})}>{!this.state.isShowChart ? 'Rows' : 'Chart'}</Button>
+									{this.state.isShowChart 
+										? <FhirResourceChart fhirResources={resources}/>
+										: resources.map(resource => {return (
 										<FhirResource 
 										fhirResource={resource} 
 										fhirVersion={fhirVersions.R4}
 										thorough={true}/>
-									)})}
+											)})
+									}
 								</TabPanel>
 							)
 						})}
