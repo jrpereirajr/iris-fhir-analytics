@@ -38,7 +38,7 @@ After installation, some data will be uploaded to IRIS for Health. Wait for IRIS
 
 IRIS Analytics:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/FVIjalYu9r.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/LxWO1IR5KK.gif"></img>
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/fIXdOhasCS.gif"></img>
 

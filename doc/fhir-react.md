@@ -2,7 +2,9 @@
 
 The [fhir-react](https://github.com/1uphealth/fhir-react#readme) project is a React UI framework based on Google Material Design, which [covers almost all FHIR resources](https://github.com/1uphealth/fhir-react#available-resources) for versions DSTU2, STU3 and R4.
 
-It design it's really friendly - there's just one component! As FHIR resource types are standards, the framework resolves internally what rendering class must be used. 
+It design it's really friendly - there's just one component! As FHIR resource types are standards, the framework resolves internally what rendering class must be used.
+
+I used the same idea applied for charts [here](https://github.com/jrpereirajr/iris-fhir-analytics/blob/master/doc/fhir-chart-react.md).
 
 To display your FHIR resource just write this component:
 
@@ -26,11 +28,11 @@ First, only resources of type Patient are returned, and each one of them are ren
 
 The results are shown below:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/WQcdE2huU2.gif"></img>
-
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/FVIjalYu9r.gif"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/LxWO1IR5KK.gif"></img>
 
 <img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/xl4IBx5532.gif"></img>
+
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/WQcdE2huU2.gif"></img>
 
 [Here](https://github.com/jrpereirajr/iris-fhir-analytics/tree/master/fhirUI/react-fhir-react/README.md) you can find the sources files and instructions for build this web application.
 
