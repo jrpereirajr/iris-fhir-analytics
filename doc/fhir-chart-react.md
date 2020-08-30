@@ -4,13 +4,13 @@ The [fhir-react](https://github.com/1uphealth/fhir-react#readme) project defines
 
 So, I decided to apply the same idea, but for charts. The basic idea is depicted below:
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/diagram1.png"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/diagram2.png"></img>
 
 For instance, some FHIR resources like Observation, Condition etc., has a code. Thus, we can aggregate all codes and count them. 
 
 Such aggregation creates a standard data model.
 
-<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/Screenshot_1.png.png"></img>
+<img src="https://raw.githubusercontent.com/jrpereirajr/iris-fhir-analytics/master/img/Screenshot_1.png"></img>
 
 Finally, this model could be adapted for any char library.
 
