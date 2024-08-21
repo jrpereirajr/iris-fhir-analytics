@@ -14,7 +14,7 @@
     "date-fns": "^2.15.0",
     "fhir-react": "^0.1.2",
     "fhir-ui": "github:jrpereirajr/fhir-ui#iris-contest",
-    "highcharts": "^8.2.0",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^3.0.0",
     "moment": ">=2.0.0",
     "react": ">=16.9.0",
